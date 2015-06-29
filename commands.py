@@ -46,14 +46,14 @@ def matchMeaning(tokens, words):
 
 		extendedWords = {}
 		for w in words:
-			extwords = []			
+			extwords = []
 			extwords.extend([w])
 			extwords.extend(nlpy.autoWordToNoun(w))
 			extwords.extend(nlpy.autoWordToVerb(w))
 			extendedWords[w] = Set(extwords)
 		result = []
 		for token in tokens:
-			extwords = []			
+			extwords = []
 			extwords.extend([token])
 			extwords.extend(nlpy.autoWordToNoun(token))
 			extwords.extend(nlpy.autoWordToVerb(token))
@@ -367,4 +367,3 @@ def execute(text, speech):
 			doWakeUp(text, score, speech, translator)
 		else:
 			print 'command not known:',text
-		

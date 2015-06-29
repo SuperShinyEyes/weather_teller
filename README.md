@@ -2,7 +2,7 @@ https://www.youtube.com/watch?v=94IOUW0EQyg
 
 ## Dependencies
 * [Python 2.x +](http://www.python.org/getit/)
-* [nltk](http://www.nltk.org/) 
+* [nltk](http://www.nltk.org/)
 * [sympy](http://sympy.org/en/index.html)
 * [pygrooveshark](https://github.com/koehlma/pygrooveshark)
 
@@ -78,4 +78,3 @@ change language to spanish
 change language to french
 
 change language to japanese
-

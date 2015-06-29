@@ -121,7 +121,7 @@ class Speech:
 		fileName = '.'+_randstr(size=10)+'.mp3'
 		self._downloadAudioFile(text, self.lang, open(fileName, 'w'))
 		return fileName
-		
+
 	def _convertTextAsLinesOfText(self, text):
 		""" This converts string or file to a usable chunk or several
 		chunks - each smaller than 100 characters.
@@ -155,7 +155,7 @@ class Speech:
 					temp_array.append(temp_string)
 					text_lines.extend(temp_array)
 		return text_lines
-		
+
 	def _downloadAudioFile(self, text_lines, language, audio_file):
 		"""
 		Downloads an MP3 from Google Translate.
@@ -182,7 +182,7 @@ class Speech:
 				except:
 					SAVE_SOUND = False
 					print('failed to save good response as: {}'.format(audio_file.name))
-		#if SAVE_SOUND:    
+		#if SAVE_SOUND:
 		#    print('Saved MP3 to {}'.format(audio_file.name))
 		#if idx > 0:
 		#    print('it enunciates {} lines of text'.format(idx+1))
@@ -200,17 +200,17 @@ class Speech:
 class Translator:
 	string_pattern = r"\"(([^\"\\]|\\.)*)\""
 	match_string =re.compile(
-		r"\,?\[" 
-		+ string_pattern + r"\," 
-		+ string_pattern + r"\," 
-		+ string_pattern + r"\," 
+		r"\,?\["
+		+ string_pattern + r"\,"
+		+ string_pattern + r"\,"
+		+ string_pattern + r"\,"
 		+ string_pattern
 		+r"\]")
 
 	def __init__(self, from_lang, to_lang,):
 		self.from_lang = from_lang
 		self.to_lang = to_lang
-   
+
 	def translate(self, text):
 		import locale
 		text = text.encode(locale.getpreferredencoding())
@@ -235,7 +235,7 @@ class Translator:
 				break
 			result += m.group(1)
 			pos = m.end()
-		return result 
+		return result
 
 	def _get_json5_from_google(self, source):
 		escaped_source = quote(source, '')
@@ -254,7 +254,7 @@ if __name__ == "__main__":
 	print tr.translate('hello world')
 	sp = Speech('en-uk')
 	filename = sp.getAudio('hello world')
-	
+
 	import psw
 	psw.play(filename)
 	import os

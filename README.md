@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 https://www.youtube.com/watch?v=94IOUW0EQyg
 
 ## Dependencies
@@ -78,3 +79,7 @@ change language to spanish
 change language to french
 
 change language to japanese
+=======
+# weather_teller
+You say a name of a city, then it will tell you the weather there :)
+>>>>>>> b50d4298bf64f8a95f8964409a7f5934c6939be0
